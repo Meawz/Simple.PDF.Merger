@@ -6,6 +6,7 @@ merger = PyPDF2.PdfMerger()
 for file in os.listdir(os.curdir):
     if file.endswith(".pdf"):
         merger.append(file)
-merger.write("combined.pdf")
-
-print("Done!")
+        merger.write("combined.pdf")
+        print("Done!")
+    else:
+        print("No files to combine!")
